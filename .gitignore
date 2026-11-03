@@ -1,0 +1,50 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---------- Ambientes virtuais ----------
+venv/
+.venv/
+env/
+ENV/
+.env
+
+# ---------- Dados (arquivos pesados) ----------
+data/raw/**
+data/processed/**
+!data/raw/
+!data/raw/dota2/
+!data/raw/lol/
+!data/processed/
+!data/**/.gitkeep
+*.csv
+*.data
+*.arff
+*.parquet
+*.feather
+*.zip
+*.tar.gz
+*.rar
+
+# ---------- Modelos serializados ----------
+*.pkl
+*.joblib
+*.h5
+*.sav
+
+# ---------- IDEs e sistema ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
