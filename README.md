@@ -32,6 +32,5 @@ Saídas: `results/tables/` (CSVs) e `results/figures/` (PNGs).
 
 ## Estrutura
 - `src/`: código-fonte
-- `notebooks/`: análise exploratória
 - `results/`: figuras e tabelas geradas
 - `report/`: relatório técnico
