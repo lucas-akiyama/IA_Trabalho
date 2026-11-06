@@ -48,3 +48,6 @@ data/processed/**
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# ------------ resultados ------------
+!results/tables/*.csv

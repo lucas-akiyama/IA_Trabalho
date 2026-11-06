@@ -24,8 +24,11 @@ Os dados NÃO são versionados. Baixe-os e coloque-os em:
 
 ## Execução
 ```bash
-python -m src.main
+python -m src.main --quick                 # verificação rápida (grades reduzidas)
+python -m src.main                         # experimento completo (3 cenários)
+python -m src.main --scenarios dota2       # apenas um cenário
 ```
+Saídas: `results/tables/` (CSVs) e `results/figures/` (PNGs).
 
 ## Estrutura
 - `src/`: código-fonte
