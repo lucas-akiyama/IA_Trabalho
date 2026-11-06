@@ -58,3 +58,39 @@ RF_FIXED_PARAMS = {
     "random_state": RANDOM_STATE,
     "n_jobs": -1,
 }
+
+LOL_N_PLAYERS = 5
+LOL_TEAMS = (1, 2)
+
+LOL_PICK_COLS = {
+    t: [f"t{t}_champ{i}id" for i in range(1, LOL_N_PLAYERS + 1)] for t in LOL_TEAMS
+}
+LOL_BAN_COLS = {
+    t: [f"t{t}_ban{i}" for i in range(1, LOL_N_PLAYERS + 1)] for t in LOL_TEAMS
+}
+LOL_SPELL_COLS = {
+    t: [
+        f"t{t}_champ{i}_sum{j}"
+        for i in range(1, LOL_N_PLAYERS + 1)
+        for j in (1, 2)
+    ]
+    for t in LOL_TEAMS
+}
+
+LOL_FIRST_EVENT_COLS = [
+    "firstBlood", "firstTower", "firstInhibitor",
+    "firstBaron", "firstDragon", "firstRiftHerald",
+]
+LOL_INGAME_NUMERIC_COLS = ["gameDuration"] + [
+    f"t{t}_{stat}"
+    for t in LOL_TEAMS
+    for stat in (
+        "towerKills", "inhibitorKills", "baronKills",
+        "dragonKills", "riftHeraldKills",
+    )
+]
+
+LOL_DROP_COLS = ["creationTime", "seasonId"]
+
+# é possível alterar para "accuracy", "precision", "recall", "f1"
+SELECTION_METRIC = "f1"  
