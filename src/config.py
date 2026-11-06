@@ -93,4 +93,24 @@ LOL_INGAME_NUMERIC_COLS = ["gameDuration"] + [
 LOL_DROP_COLS = ["creationTime", "seasonId"]
 
 # é possível alterar para "accuracy", "precision", "recall", "f1"
-SELECTION_METRIC = "f1"  
+SELECTION_METRIC = "accuracy"  
+
+SEEDS = [42, 43, 44, 45, 46]
+
+# Reduced settings for a fast end-to-end check: python -m src.main --quick
+QUICK_SEEDS = [42, 43]
+QUICK_MLP_PARAM_GRID = {
+    "hidden_layer_sizes": [(32,), (64, 32)],
+    "learning_rate_init": [0.001, 0.01],
+    "alpha": [0.0001],
+}
+QUICK_RF_PARAM_GRID = {
+    "n_estimators": [50, 100],
+    "max_depth": [5, 10],
+}
+
+CLASS_NAMES = {
+    "dota2": ("Dire won", "Radiant won"),
+    "lol_draft_only": ("Team 2 won", "Team 1 won"),
+    "lol_draft_ingame": ("Team 2 won", "Team 1 won"),
+}

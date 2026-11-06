@@ -1,22 +1,3 @@
-"""
-models.py
-MLP and Random Forest builders, hyperparameter tuning on a validation split
-and final evaluation on the test set.
-
-PT-BR: Construtores do MLP e do Random Forest, ajuste de hiperparâmetros em
-uma divisão de validação e avaliação final no conjunto de teste.
-
-Protocol (no data leakage in model selection):
-  1. Hyperparameters are compared on a validation set carved out of the
-     TRAINING data (see preprocessing.make_validation_split).
-  2. The best configuration is refitted on the FULL training set.
-  3. The test set is used exactly once, for the final evaluation.
-
-PT-BR: (1) hiperparâmetros são comparados em uma validação extraída do
-TREINO; (2) a melhor configuração é reajustada em todo o treino; (3) o
-teste é usado uma única vez, na avaliação final.
-"""
-
 import time
 
 import pandas as pd
